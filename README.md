@@ -13,9 +13,10 @@ A web-based sketching application that allows users to draw or sketch ideas on a
 ---
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/df867ae5-e0ae-4ad9-ace8-f9280a11054a" width="32%" />
-  <img src="https://github.com/user-attachments/assets/7db1549d-4bab-4986-8253-ba96876381fd" width="32%" />
   <img src="https://github.com/user-attachments/assets/2aae1f49-ccfa-4439-933c-a4c2df58dae2" width="32%" />
+  <img src="https://github.com/user-attachments/assets/7db1549d-4bab-4986-8253-ba96876381fd" width="32%" />
+  <img src="https://github.com/user-attachments/assets/df867ae5-e0ae-4ad9-ace8-f9280a11054a" width="32%" />
+
 </p>
 
 ---
