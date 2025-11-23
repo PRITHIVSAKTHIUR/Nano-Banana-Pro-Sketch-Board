@@ -1,0 +1,223 @@
+
+:root {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: beige;
+  --main-color: black;
+  --page-bg: lightblue;
+  --cursor-crosshair: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>') 12 12, crosshair;
+  --cursor-eraser: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/></svg>') 0 24, auto;
+}
+
+[data-theme='dark'] {
+  --input-focus: #2d8cf0;
+  --font-color: #323232;
+  --font-color-sub: #666;
+  --bg-color: #fff;
+  --main-color: #323232;
+  --page-bg: lightgrey;
+  --cursor-crosshair: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12h14"/></svg>') 12 12, crosshair;
+  --cursor-eraser: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23323232" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m7 21-4.3-4.3c-1-1-1-2.5 0-3.4l9.6-9.6c1-1 2.5-1 3.4 0l5.6 5.6c1 1 1 2.5 0 3.4L13 21"/><path d="M22 21H7"/></svg>') 0 24, auto;
+}
+
+html {
+  color-scheme: light dark;
+  background-color: var(--page-bg);
+  color: var(--font-color);
+  font-family: sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.title {
+  color: var(--font-color);
+  font-weight: 900;
+}
+
+.custom-input {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.custom-input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.custom-input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.button-log {
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-log:active {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.canvas-custom {
+  border-radius: 5px;
+  border: 2px solid var(--main-color) !important;
+  background-color: white;
+  box-shadow: 4px 4px var(--main-color);
+  cursor: var(--cursor-crosshair);
+  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.cursor-eraser {
+  cursor: var(--cursor-eraser) !important;
+}
+
+.button-log-small {
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-log-small:active:not(:disabled) {
+  box-shadow: 0px 0px var(--main-color);
+  transform: translate(3px, 3px);
+}
+
+.button-log-small:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.prompt-input {
+  width: 100%;
+  height: 52px;
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  box-shadow: 4px 4px var(--main-color);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--font-color);
+  padding: 5px 10px;
+  padding-right: 60px; /* space for the button */
+  outline: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.prompt-input::placeholder {
+  color: var(--font-color-sub);
+  opacity: 0.8;
+}
+
+.prompt-input:focus {
+  border: 2px solid var(--input-focus);
+}
+
+.button-confirm {
+  cursor: pointer;
+  height: 100%;
+  width: 48px;
+  border-radius: 5px;
+  border: none;
+  background-color: transparent;
+  font-weight: 600;
+  color: var(--font-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.1s ease-in-out;
+}
+
+.button-confirm:active:not(:disabled) {
+  transform: translate(3px, 3px);
+}
+
+.button-confirm:disabled {
+    color: var(--font-color-sub);
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.modal-content {
+  padding: 24px;
+  background: var(--bg-color);
+  border-radius: 5px;
+  border: 2px solid var(--main-color);
+  box-shadow: 4px 4px var(--main-color);
+  color: var(--font-color);
+}
+
+/* Custom Range Slider for Retro Theme */
+input[type=range] {
+  -webkit-appearance: none;
+  width: 100%;
+  background: transparent;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  background: var(--bg-color);
+  cursor: pointer;
+  margin-top: -6px;
+  box-shadow: 1px 1px var(--main-color);
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--main-color);
+  border-radius: 2px;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border: 2px solid var(--main-color);
+  border-radius: 50%;
+  background: var(--bg-color);
+  cursor: pointer;
+  box-shadow: 1px 1px var(--main-color);
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 4px;
+  cursor: pointer;
+  background: var(--main-color);
+  border-radius: 2px;
+}

@@ -1,0 +1,5 @@
+{
+  "name": "nanobanana-sketch-to-image",
+  "description": "Turn sketches into stunning visuals. Draw, prompt, and let Gemini transform your ideas into creative images in seconds.",
+  "requestFramePermissions": []
+}
